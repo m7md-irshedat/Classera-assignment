@@ -1,8 +1,29 @@
 <?php
 
+/**
+ * Class Round grades for each student's
+ *
+ * @author   Mohammed Irshedat
+ */
+
 class roundGrades {
 
+    /**
+    * grading students It should return an integer array consisting of rounded grades
+    *
+    * @param  int[] $grades Array have students grades
+    * @source 30 1  Check that ensures counting
+    * @source 32 1  Round the grade according to the rules
+    * @source 37 1  The grade is out of rules
+    * @return int[] The rounded grades of students 
+    */	
+
 	public static function gradingStudents ($grades) {
+
+		/**
+        * @var int[] $newGrade array temporary hold the new grade
+        * @var int[] $roundedGrades array have the new grade
+        */
 
 	    $roundedGrades = [];
 
@@ -18,6 +39,7 @@ class roundGrades {
             	$newGrade = $grades[$i];  
         	}
 
+        	//Push the element of $newGrade to $roundedGrades
         	array_push($roundedGrades, $newGrade);
     	}
 
